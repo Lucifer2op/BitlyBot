@@ -32,9 +32,7 @@ data = json.dumps(value)
 r = requests.Get('https://adrinolinks.in/api?api=ADRINO_TOKEN&url=long_url', headers=headers,data = data )
     result = r.json()
     link = result["link"]
-    await message.reply_text(f"
-{link}
-", reply_to_message_id= message.message_id)
+    await message.reply_text(f"```{link}```", reply_to_message_id= message.message_id)
   except Exception as e :
     await message.reply_text(e)
   
