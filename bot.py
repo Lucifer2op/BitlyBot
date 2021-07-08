@@ -30,11 +30,11 @@ value  = {'long_url': URL , 'domain': DOMAIN}
 data = json.dumps(value)
 try:
 r = requests.Get('https://adrinolinks.in/api?api=ADRINO_TOKEN&url=', headers=headers,data = data )
-    result = r.json()
-    link = result["link"]
-    await message.reply_text(f"```{link}```", reply_to_message_id= message.message_id)
-  except Exception as e :
-    await message.reply_text(e)
+result = r.json()
+link = result["link"]
+await message.reply_text(f"```{link}```", reply_to_message_id= message.message_id)
+except Exception as e :
+await message.reply_text(e)
   
 app.run()
 
