@@ -24,12 +24,18 @@ async def start(client,message):
 URL = message.text
 DOMAIN = "adrinolinks.in"
 value  = {'long_url': URL , 'domain': DOMAIN}
-$api_url = "https://adrinolinks.in/api?api={$ADRINO_TOKEN}&url={$long_url}&alias=CustomAlias";
-$result = @json_decode(file_get_contents($api_url),TRUE);
-if($result["status"] === 'error') {
- echo $result["message"];
-} else {
- echo $result["shortenedUrl"];
-}
+URL = message.text
+  DOMAIN = "adrinolinks.in"
+  value  = {'long_url': URL , 'domain': DOMAIN}
+  data = json.dumps(value)
+  try:
+    r = requests.Get('https://adrinolinks.in/api?api=ADRINO_TOKEN&url=', headers=headers,data = data )
+    result = r.json()
+    link = result["link"]
+    await message.reply_text(f"
+{link}
+", reply_to_message_id= message.message_id)
+  except Exception as e :
+    await message.reply_text(e)
   
 app.run()
