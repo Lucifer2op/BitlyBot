@@ -13,6 +13,6 @@ Bitly Short link generator Bot
 * ADRINO_TOKEN  - From https://adrinolinks.in/member/tools/api
 
 ## Deploy
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/lntechnical2/BitlyBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Lucifer2op/BitlyBot)
 
 
