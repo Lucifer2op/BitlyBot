@@ -1,6 +1,6 @@
 {
-    "name": "Bitly Link Shortener",
-    "description": "Bot can Generate Bitly short l8nk ",
+    "name": "ADRINO Link Shortener",
+    "description": "Bot can Generate ADRINO short link ",
     "repository": "https://github.com/lntechnical2/BitlyBot",
     "keywords": ["Bitly", "pyrogram", "telegram bot"],
     "env": {
@@ -13,8 +13,8 @@
         "API_HASH": {
             "description": "Your API_HASH from https://my.telegram.org/apps"
         },
-        "BITLY_TOKEN":{
-            "description": "Your BITLY_TOKEN from https://bitly.is/accesstoken"
+        "ADRINO_TOKEN":{
+            "description": "Your ADRINO_TOKEN from https://adrinolinks.in/member/tools/api"
         
         }
     },
