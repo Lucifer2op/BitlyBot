@@ -37,3 +37,4 @@ r = requests.Get('https://adrinolinks.in/api?api=ADRINO_TOKEN&url=', headers=hea
     await message.reply_text(e)
   
 app.run()
+
