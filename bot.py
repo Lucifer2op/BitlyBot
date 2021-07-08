@@ -24,8 +24,8 @@ async def start(client,message):
 
 @app.on_message(filters.private & filters.regex("http|https"))
 async def ADRINO(client,message):
-URL = "message.text"
-DOMAIN = "adrinolinks.in"
+  URL = message.text
+  DOMAIN = "adrinolinks.in"
 value  = {'long_url': URL , 'domain': DOMAIN}
 data = json.dumps(value)
   try:
