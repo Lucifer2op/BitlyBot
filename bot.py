@@ -21,7 +21,9 @@ app = Client("pdiskbot" ,bot_token = TOKEN ,api_id = API_ID ,api_hash = API_HASH
 @app.on_message(filters.private & filters.command(['start']))
 async def start(client,message):
   await message.reply_text(f"Hello {message .from_user.first_name}\nhello i am adrinolinks.in short link genrator\n made with love by @Lucifer_morning_star_op ", reply_to_message_id = message.message_id)
-$long_url = urlencode('message.text');
+URL = message.text
+DOMAIN = "adrinolinks.in"
+value  = {'long_url': URL , 'domain': DOMAIN}
 $api_url = "https://adrinolinks.in/api?api={$ADRINO_TOKEN}&url={$long_url}&alias=CustomAlias";
 $result = @json_decode(file_get_contents($api_url),TRUE);
 if($result["status"] === 'error') {
