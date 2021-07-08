@@ -21,6 +21,9 @@ app = Client("pdiskbot" ,bot_token = TOKEN ,api_id = API_ID ,api_hash = API_HASH
 @app.on_message(filters.private & filters.command(['start']))
 async def start(client,message):
   await message.reply_text(f"Hello {message .from_user.first_name}\nhello i am adrinolinks.in short link genrator\n made with love by @Lucifer_morning_star_op ", reply_to_message_id = message.message_id)
+
+@app.on_message(filters.private & filters.regex("http|https"))
+async def ADRINO(client,message):
 URL = message.text
 DOMAIN = "adrinolinks.in"
 value  = {'long_url': URL , 'domain': DOMAIN}
